@@ -24,8 +24,9 @@ def convert_mp4_to_wav(input_folder, output_folder):
             audio.write_audiofile(output_path, codec='pcm_s16le', bitrate='320k', ffmpeg_params=['-ar', '44100'])
 
 # Convert MP4 files in each folder to WAV files
-input_folders = ['dev_raw/','test_raw/','train_raw/']
-output_folders = ['dev_wav','test_wav','train_wav']
+input_folders = ['train_raw/']
+output_folders = ['train_wav']
 
 for i in range(len(input_folders)):
-    convert_mp4_to_wav(input_folders[i], output_folders[i])
+    # convert_mp4_to_wav(input_folders[i], output_folders[i])
+    print("Uncomment line above to run code")

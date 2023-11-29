@@ -24,8 +24,9 @@ test_path = 'MELD.Raw/test_raw/'
 
 finals = count_files_starting_with(test_path, 'final')
 raws = count_files_starting_with(test_path, 'dia')
+extras = count_files_starting_with(test_path, '._')
 print("Shape test:",test_df.shape)
-print(f"Finals in test:{finals}, RAws: {raws}")
+print(f"Finals in test:{finals}, RAws: {raws}, Extras: {extras}")
 
 train_path = 'MELD.Raw/train_raw/'
 
