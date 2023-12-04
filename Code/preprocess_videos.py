@@ -10,22 +10,29 @@ def convert_mp4_to_wav(input_folder, output_folder):
 
     # Iterate through files in the input folder
     for file_name in os.listdir(input_folder):
-
-      # convert mp4 files only
-        if file_name.endswith('.mp4'):
+        # convert mp4 files only
+        if file_name.endswith(".mp4"):
             input_path = os.path.join(input_folder, file_name)
-            output_path = os.path.join(output_folder, os.path.splitext(file_name)[0] + '.wav')
+            output_path = os.path.join(
+                output_folder, os.path.splitext(file_name)[0] + ".wav"
+            )
 
             # Load MP4 file and extract audio
             video = VideoFileClip(input_path)
             audio = video.audio
 
             # Write audio to WAV file
-            audio.write_audiofile(output_path, codec='pcm_s16le', bitrate='320k', ffmpeg_params=['-ar', '44100'])
+            audio.write_audiofile(
+                output_path,
+                codec="pcm_s16le",
+                bitrate="320k",
+                ffmpeg_params=["-ar", "44100"],
+            )
+
 
 # Convert MP4 files in each folder to WAV files
-input_folders = ['train_raw/']
-output_folders = ['train_wav']
+input_folders = ["train_raw/"]
+output_folders = ["train_wav"]
 
 for i in range(len(input_folders)):
     # convert_mp4_to_wav(input_folders[i], output_folders[i])
