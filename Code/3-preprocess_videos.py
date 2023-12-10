@@ -31,8 +31,8 @@ def convert_mp4_to_wav(input_folder, output_folder):
 
 
 # Convert MP4 files in each folder to WAV files
-input_folders = ["train_raw/"]
-output_folders = ["train_wav"]
+input_folders = ["train_raw/", "test_raw/", "dev_raw/"]
+output_folders = ["train_wav", "test_wav", "dev_wav"]
 
 for i in range(len(input_folders)):
     # convert_mp4_to_wav(input_folders[i], output_folders[i])
