@@ -60,7 +60,7 @@ check_file_distribution("wav/train_wav")
 feature_files = ["dev_features.csv", "test_features.csv", "train_features.csv"]
 
 # Load CSV data for each feature file
-feature_dfs = load_csv_data(feature_files, sep=",")
+feature_dfs = load_csv_data(feature_files, sep=";")
 
 for i, df in enumerate(feature_dfs):
     print(f"\n-----NAME: {feature_files[i]}-------")
